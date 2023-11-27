@@ -1,27 +1,17 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Zoo
 {
-    class Hippo:MonoBehaviour
+    class Hippo:Herbivores
     {
-        public string name;
-        [SerializeField]
-        private GameObject Balloon;
-        [SerializeField]
-        private Text text;
 
-        public void SayHello()
+        public Hippo()
         {
-            Balloon.SetActive(true);
-            text.text = "splash";
-        }
-
-        public void EatLeaves()
-        {
-            Balloon.SetActive(true);
-            text.text = "munch munch lovely";
+            name = "elsa";
+            animalSound = "splash";
+            eatingSound = "munch munch lovely";
         }
     }
-    
 }

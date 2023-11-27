@@ -1,18 +1,40 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Animal : MonoBehaviour
+namespace Zoo
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Animal : MonoBehaviour
     {
-        
-    }
+        public string name;
+        public GameObject Balloon; 
+        [HideInInspector]
+        public GameObject text;
+        public string animalSound;
+        public string eatingSound;
+        public Animal()
+        {
 
-    // Update is called once per frame
-    void Update()
-    {
+        }
+        public void SayHello()
+        {
+            Balloon.SetActive(true);
+            text.GetComponent<Text>().text = animalSound;
+        }
         
+        public void PerformTrick()
+        {
+            StartCoroutine(DoTrick());
+        }
+
+        IEnumerator DoTrick()
+        {
+            for (int i = 0; i < 360; i++)
+            {
+                transform.localRotation = Quaternion.Euler(i, 0, 0);
+                yield return new WaitForEndOfFrame();
+            }
+        }
     }
 }

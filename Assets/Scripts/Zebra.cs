@@ -4,25 +4,13 @@ using UnityEngine.UI;
 
 namespace Zoo
 {
-    class Zebra : MonoBehaviour
+    class Zebra : Herbivores
     {
-        [SerializeField]
-        private GameObject Balloon;
-        [SerializeField]
-        private Text text;
-        public string name;
-
-
-        public void SayHello()
+        public Zebra()
         {
-            Balloon.SetActive(true);
-            text.text = "zebra zebra";
-        }
-
-        public void EatLeaves()
-        {
-            Balloon.SetActive(true);
-            text.text = "munch munch zank yee bra";
+            name = "elsa";
+            animalSound = "splash";
+            eatingSound = "munch munch lovely";
         }
     }
 }
