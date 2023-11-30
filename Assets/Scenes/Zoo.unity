@@ -673,7 +673,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 887016508}
-        m_MethodName: Eat
+        m_MethodName: EatMeat
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -933,6 +933,7 @@ MonoBehaviour:
   - {fileID: 114775757915394608, guid: b4ef08bb34d7e8d42a322a3fb477bd93, type: 3}
   - {fileID: 114971796148678666, guid: 9d8f88e4e4860ac489141755f7175db2, type: 3}
   - {fileID: 114782059285527604, guid: ca5452b56f32abc46bc83ba2db5f04fd, type: 3}
+  InputField: {fileID: 1717165944}
 --- !u!1 &1096552935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,7 +1171,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 887016508}
-        m_MethodName: Eat
+        m_MethodName: EatLeaves
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace Zoo
 {
@@ -10,6 +11,8 @@ namespace Zoo
         private List<Animal> animals = new List<Animal>(5);
 
         private List<Animal> animalobjects = new List<Animal>();
+        public InputField InputField;
+        
         private void Start()
         {
             for (int i = 0; i < animals.Count; i++)
@@ -18,11 +21,19 @@ namespace Zoo
             }
         }
 
-        public void Eat()
+        public void EatMeat()
         {
             foreach (Animal animal in animalobjects)
             {
-                animal.StartCoroutine(animal.Eat());
+                Debug.Log("hi");
+                animal.StartCoroutine(animal.EatMeat());
+            }
+        }
+        public void EatLeaves()
+        {
+            foreach (Animal animal in animalobjects)
+            {
+                animal.StartCoroutine(animal.EatLeaves());
             }
         }
 
@@ -36,9 +47,19 @@ namespace Zoo
 
         public void SayHello()
         {
+            if (InputField.text == "")
+            {
+                foreach (Animal animal in animalobjects)
+                {
+                    animal.StartCoroutine(animal.SayHello());
+                }
+            }
             foreach (Animal animal in animalobjects)
             {
-                animal.StartCoroutine(animal.SayHello());
+                if (animal.name == InputField.text)
+                {
+                    animal.StartCoroutine(animal.SayHello());
+                }
             }
         }
     }

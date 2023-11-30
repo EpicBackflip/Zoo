@@ -8,9 +8,9 @@ namespace Zoo
     {
         public Zebra()
         {
-            name = "elsa";
-            animalSound = "splash";
-            eatingSound = "munch munch lovely";
+            name = "marty";
+            animalSound = "zebra";
+            eatingSound = "munch munch zank yee bra";
         }
     }
 }

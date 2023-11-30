@@ -11,14 +11,23 @@ namespace Zoo
         public string name;
         public GameObject Balloon;
         public Text text;
-        [HideInInspector]
-        public string animalSound;
-        [HideInInspector]
-        public string eatingSound;
-        public Animal()
+        protected string animalSound;
+        protected string eatingSound;
+        protected bool canEatMeat;
+        protected bool canEatLeaves;
+        protected bool canEatBoth;
+        protected bool canDoTrick;
+        protected Animal()
         {
-
+            
         }
+        
+        public Animal(string animalSound, string eatingSound)
+        {
+            this.animalSound = animalSound;
+            this.eatingSound = eatingSound;
+        }
+        
         public IEnumerator SayHello()
         {
             Balloon.SetActive(true);
@@ -31,17 +40,34 @@ namespace Zoo
         {
             for (int i = 0; i < 360; i++)
             {
-                transform.localRotation = Quaternion.Euler(i, 0, 0);
-                yield return new WaitForEndOfFrame();
+                if (canDoTrick)
+                {
+                    transform.localRotation = Quaternion.Euler(i, 0, 0);
+                    yield return new WaitForEndOfFrame();
+                }
             }
         }
 
-        public IEnumerator Eat()
+        public IEnumerator EatMeat()
         {
-            Balloon.SetActive(true);
-            text.text = eatingSound;
-            yield return new WaitForSeconds(3);
-            Balloon.SetActive(false);
+            if (canEatMeat || canEatBoth)
+            {
+                Balloon.SetActive(true);
+                text.text = eatingSound;
+                yield return new WaitForSeconds(3);
+                Balloon.SetActive(false);
+            }
+        }
+        
+        public IEnumerator EatLeaves()
+        {
+            if (canEatLeaves || canEatBoth)
+            {
+                Balloon.SetActive(true);
+                text.text = eatingSound;
+                yield return new WaitForSeconds(3);
+                Balloon.SetActive(false); 
+            }
         }
     }
 }

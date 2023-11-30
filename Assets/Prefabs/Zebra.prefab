@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &224377173649267246
 RectTransform:
   m_ObjectHideFlags: 0
@@ -195,8 +195,6 @@ MonoBehaviour:
   name: marty
   Balloon: {fileID: 1043684593461274}
   text: {fileID: 114601203191200772}
-  animalSound: zebra zebra
-  eatingSound: munch munch zank yee bra
 --- !u!1 &1247384754963540
 GameObject:
   m_ObjectHideFlags: 0

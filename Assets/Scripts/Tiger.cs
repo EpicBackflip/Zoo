@@ -8,9 +8,10 @@ namespace Zoo
     {
         public Tiger()
         {
-            name = "elsa";
-            animalSound = "splash";
-            eatingSound = "AAAAAAAAAAAAAA";
+            name = "wally";
+            animalSound = "rraaarww";
+            eatingSound = "nomnomnom thx wubalubadubdub";
+            canDoTrick = true;
         }
     }
 }

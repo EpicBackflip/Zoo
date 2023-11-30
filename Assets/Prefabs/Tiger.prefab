@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &224068679645393730
 RectTransform:
   m_ObjectHideFlags: 0
@@ -195,8 +195,6 @@ MonoBehaviour:
   name: 
   Balloon: {fileID: 1088522889311824}
   text: {fileID: 114859519199696330}
-  animalSound: splash
-  eatingSound: munch munch lovely
 --- !u!1 &1842172867500350
 GameObject:
   m_ObjectHideFlags: 0

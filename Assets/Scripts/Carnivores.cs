@@ -9,10 +9,9 @@ namespace Zoo
 { 
     public class Carnivores : Animal
     {
-        public void EatMeat()
+        public Carnivores()
         {
-            Balloon.SetActive(true);
-            text.GetComponent<Text>().text = eatingSound;
+            canEatMeat = true;
         }
     }   
 }

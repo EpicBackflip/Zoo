@@ -4,15 +4,16 @@ using UnityEngine.UI;
 
 namespace Zoo
 {
-    class Pig : Animal
+
+    class Pig : Carnivores
     {
-        public string eatingMeatSound;
         public Pig()
         {
+            canEatBoth = true;
             name = "dora";
-            animalSound = "splash";
-            eatingSound = "munch munch lovely";
-            eatingMeatSound = "nomnomnom oink thx";
+            animalSound = "oink oink";
+            eatingSound = "munch munch oink";
+            canDoTrick = true;
         }
     }
 }

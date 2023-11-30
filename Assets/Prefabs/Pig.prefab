@@ -91,8 +91,6 @@ MonoBehaviour:
   name: dora
   Balloon: {fileID: 1443667079496550}
   text: {fileID: 114775420087525412}
-  animalSound: oink oink
-  eatingSound: munch munch oink
 --- !u!114 &114049988383627832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +126,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &224840522025702696
 RectTransform:
   m_ObjectHideFlags: 0

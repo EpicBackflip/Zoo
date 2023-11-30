@@ -7,10 +7,9 @@ namespace Zoo
 {
     public class Herbivores : Animal
     {
-        public void EatLeaves()
+        public Herbivores()
         {
-            Balloon.SetActive(true);
-            text.GetComponent<Text>().text = "munch munch oink";
+            canEatLeaves = true;
         }
     }
 }
