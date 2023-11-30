@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace Zoo
@@ -8,33 +9,39 @@ namespace Zoo
     public class Animal : MonoBehaviour
     {
         public string name;
-        public GameObject Balloon; 
+        public GameObject Balloon;
+        public Text text;
         [HideInInspector]
-        public GameObject text;
         public string animalSound;
+        [HideInInspector]
         public string eatingSound;
         public Animal()
         {
 
         }
-        public void SayHello()
+        public IEnumerator SayHello()
         {
             Balloon.SetActive(true);
-            text.GetComponent<Text>().text = animalSound;
-        }
-        
-        public void PerformTrick()
-        {
-            StartCoroutine(DoTrick());
+            text.text = animalSound;
+            yield return new WaitForSeconds(3);
+            Balloon.SetActive(false);
         }
 
-        IEnumerator DoTrick()
+        public IEnumerator DoTrick()
         {
             for (int i = 0; i < 360; i++)
             {
                 transform.localRotation = Quaternion.Euler(i, 0, 0);
                 yield return new WaitForEndOfFrame();
             }
+        }
+
+        public IEnumerator Eat()
+        {
+            Balloon.SetActive(true);
+            text.text = eatingSound;
+            yield return new WaitForSeconds(3);
+            Balloon.SetActive(false);
         }
     }
 }

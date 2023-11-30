@@ -10,7 +10,7 @@ namespace Zoo
         {
             name = "elsa";
             animalSound = "splash";
-            eatingSound = "munch munch lovely";
+            eatingSound = "AAAAAAAAAAAAAA";
         }
     }
 }

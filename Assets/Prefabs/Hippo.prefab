@@ -105,11 +105,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64dda0b81d7157140b79833d4b894498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
+  name: elsa
   Balloon: {fileID: 1915205937995882}
-  text: {fileID: 0}
-  animalSound: 
-  eatingSound: 
+  text: {fileID: 114347544836270496}
+  animalSound: splash
+  eatingSound: munch munch lovely
 --- !u!1 &1789159870344546
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +186,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: nomnomnom oink thx
+  m_Text: munch munch lovely
 --- !u!1 &1915205937995882
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,7 +205,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &224841857981000870
 RectTransform:
   m_ObjectHideFlags: 0
@@ -274,4 +274,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afb2b1f0e3b309444a11532f6830a7cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seconds: 5

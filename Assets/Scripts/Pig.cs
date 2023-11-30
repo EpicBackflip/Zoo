@@ -6,11 +6,13 @@ namespace Zoo
 {
     class Pig : Animal
     {
+        public string eatingMeatSound;
         public Pig()
         {
-            name = "elsa";
+            name = "dora";
             animalSound = "splash";
             eatingSound = "munch munch lovely";
+            eatingMeatSound = "nomnomnom oink thx";
         }
     }
 }

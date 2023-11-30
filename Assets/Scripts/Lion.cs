@@ -9,8 +9,8 @@ namespace Zoo
         public Lion()
         {
             name = "elsa";
-            animalSound = "splash";
-            eatingSound = "munch munch lovely";
+            animalSound = "something else";
+            eatingSound = "yoiur mom";
         }
     }
 }

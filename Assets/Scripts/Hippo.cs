@@ -6,7 +6,6 @@ namespace Zoo
 {
     class Hippo:Herbivores
     {
-
         public Hippo()
         {
             name = "elsa";
