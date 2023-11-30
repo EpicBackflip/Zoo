@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,12 +27,10 @@ namespace Zoo
             this.eatingSound = eatingSound;
         }
         
-        public IEnumerator SayHello()
+        public void SayHello()
         {
             Balloon.SetActive(true);
             text.text = animalSound;
-            yield return new WaitForSeconds(3);
-            Balloon.SetActive(false);
         }
 
         public IEnumerator DoTrick()
@@ -46,25 +45,21 @@ namespace Zoo
             }
         }
 
-        public IEnumerator EatMeat()
+        public void EatMeat()
         {
             if (canEatMeat || canEatBoth)
             {
                 Balloon.SetActive(true);
                 text.text = eatingSound;
-                yield return new WaitForSeconds(3);
-                Balloon.SetActive(false);
             }
         }
         
-        public IEnumerator EatLeaves()
+        public void EatLeaves()
         {
             if (canEatLeaves || canEatBoth)
             {
                 Balloon.SetActive(true);
                 text.text = eatingSound;
-                yield return new WaitForSeconds(3);
-                Balloon.SetActive(false); 
             }
         }
     }

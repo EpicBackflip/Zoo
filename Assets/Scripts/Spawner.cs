@@ -25,14 +25,14 @@ namespace Zoo
             foreach (Animal animal in animalobjects)
             {
                 Debug.Log("hi");
-                animal.StartCoroutine(animal.EatMeat());
+                animal.EatMeat();
             }
         }
         public void EatLeaves()
         {
             foreach (Animal animal in animalobjects)
             {
-                animal.StartCoroutine(animal.EatLeaves());
+                animal.EatLeaves();
             }
         }
 
@@ -50,14 +50,14 @@ namespace Zoo
             {
                 foreach (Animal animal in animalobjects)
                 {
-                    animal.StartCoroutine(animal.SayHello());
+                    animal.SayHello();
                 }
             }
             foreach (Animal animal in animalobjects)
             {
                 if (animal.name == InputField.text)
                 {
-                    animal.StartCoroutine(animal.SayHello());
+                    animal.SayHello();
                 }
             }
         }
