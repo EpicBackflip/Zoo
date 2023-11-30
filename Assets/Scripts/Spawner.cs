@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace Zoo
@@ -8,7 +7,7 @@ namespace Zoo
     class Spawner : MonoBehaviour
     {
         [SerializeField]
-        private List<Animal> animals = new List<Animal>(5);
+        private List<Animal> animals = new List<Animal>(7);
 
         private List<Animal> animalobjects = new List<Animal>();
         public InputField InputField;
