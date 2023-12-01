@@ -24,7 +24,6 @@ namespace Zoo
         {
             foreach (Animal animal in animalobjects)
             {
-                Debug.Log("hi");
                 animal.EatMeat();
             }
         }
