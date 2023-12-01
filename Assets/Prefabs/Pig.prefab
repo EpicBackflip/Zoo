@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 224728448206298432}
   - component: {fileID: 222477034892408890}
   - component: {fileID: 114394415230205032}
-  - component: {fileID: 114775757915394608}
   - component: {fileID: 114049988383627832}
+  - component: {fileID: 571026778892230595}
   m_Layer: 5
   m_Name: Pig
   m_TagString: Untagged
@@ -76,21 +76,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &114775757915394608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157437131242584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 848e5eb755b2a1245b531d3779218fb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: dora
-  Balloon: {fileID: 1443667079496550}
-  text: {fileID: 114775420087525412}
 --- !u!114 &114049988383627832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +93,26 @@ MonoBehaviour:
   top: -250
   bottum: 250
   speed: 100
+--- !u!114 &571026778892230595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157437131242584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 514c2b7c1399e1e43bca63e878f9350d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: dora
+  Balloon: {fileID: 1443667079496550}
+  text: {fileID: 114775420087525412}
+  animalSound: oink oink
+  eatingSound: munch munch oink
+  canEatMeat: 1
+  canEatLeaves: 1
+  canDoTrick: 1
 --- !u!1 &1443667079496550
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,6 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afb2b1f0e3b309444a11532f6830a7cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seconds: 3
 --- !u!1 &1467703371201382
 GameObject:
   m_ObjectHideFlags: 0

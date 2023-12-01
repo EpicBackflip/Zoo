@@ -88,10 +88,10 @@ GameObject:
   - component: {fileID: 3517847755810475637}
   - component: {fileID: 3517847755810475633}
   - component: {fileID: 3517847755810475632}
-  - component: {fileID: 3517847755810475639}
   - component: {fileID: 3517847755810475638}
+  - component: {fileID: 4541639954003806785}
   m_Layer: 0
-  m_Name: fox
+  m_Name: Fox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,21 +153,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3517847755810475639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3517847755810475636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ea7c322e67da254b9ed470cac7980b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: foxy
-  Balloon: {fileID: 3517847755979632774}
-  text: {fileID: 3517847755654943796}
 --- !u!114 &3517847755810475638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,6 +170,27 @@ MonoBehaviour:
   top: -250
   bottum: 250
   speed: 100
+--- !u!114 &4541639954003806785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3517847755810475636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 514c2b7c1399e1e43bca63e878f9350d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: foxy
+  Balloon: {fileID: 3517847755979632774}
+  text: {fileID: 3517847755654943796}
+  animalSound: thanks matey
+  eatingSound: pring pring pring
+  canEatMeat: 1
+  canEatLeaves: 0
+  canEatBoth: 0
+  canDoTrick: 1
 --- !u!1 &3517847755979632774
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,3 +278,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afb2b1f0e3b309444a11532f6830a7cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seconds: 3

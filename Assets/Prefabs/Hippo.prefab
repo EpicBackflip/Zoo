@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 222739628119469348}
   - component: {fileID: 114526069506724724}
   - component: {fileID: 114014464807404962}
-  - component: {fileID: 114938508428900998}
+  - component: {fileID: -3820144174265825463}
   m_Layer: 5
   m_Name: Hippo
   m_TagString: Untagged
@@ -93,7 +93,7 @@ MonoBehaviour:
   top: -250
   bottum: 250
   speed: 100
---- !u!114 &114938508428900998
+--- !u!114 &-3820144174265825463
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,12 +102,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1503268068017508}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64dda0b81d7157140b79833d4b894498, type: 3}
+  m_Script: {fileID: 11500000, guid: 514c2b7c1399e1e43bca63e878f9350d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   name: elsa
   Balloon: {fileID: 1915205937995882}
   text: {fileID: 114347544836270496}
+  animalSound: splash
+  eatingSound: munch munch lovely
+  canEatMeat: 0
+  canEatLeaves: 1
+  canDoTrick: 0
 --- !u!1 &1789159870344546
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,3 +277,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afb2b1f0e3b309444a11532f6830a7cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seconds: 3

@@ -10,17 +10,16 @@ namespace Zoo
         public string name;
         public GameObject Balloon;
         public Text text;
-        protected string animalSound;
-        protected string eatingSound;
-        protected bool canEatMeat;
-        protected bool canEatLeaves;
-        protected bool canEatBoth;
-        protected bool canDoTrick;
-        protected Animal()
-        {
-            
-        }
-        
+        [SerializeField]
+        private string animalSound;
+        [SerializeField]
+        private string eatingSound;
+        [SerializeField]
+        private bool canEatMeat;
+        [SerializeField]
+        private bool canEatLeaves;
+        [SerializeField]
+        private bool canDoTrick;
         public Animal(string animalSound, string eatingSound)
         {
             this.animalSound = animalSound;
@@ -47,7 +46,7 @@ namespace Zoo
 
         public void EatMeat()
         {
-            if (canEatMeat || canEatBoth)
+            if (canEatMeat)
             {
                 Balloon.SetActive(true);
                 text.text = eatingSound;
@@ -56,7 +55,7 @@ namespace Zoo
         
         public void EatLeaves()
         {
-            if (canEatLeaves || canEatBoth)
+            if (canEatLeaves)
             {
                 Balloon.SetActive(true);
                 text.text = eatingSound;

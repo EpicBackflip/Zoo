@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3048065380199324306}
   - component: {fileID: 1779810190902286526}
-  - component: {fileID: -7481281010558936938}
   - component: {fileID: 7612088735431933615}
   - component: {fileID: 7859660127266684006}
+  - component: {fileID: 5900601477233561225}
   m_Layer: 5
-  m_Name: owl
+  m_Name: Owl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,21 +68,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &-7481281010558936938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697436386880772154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ce4b24dc36f18c42bfab7f18eed1290, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: owlywowly
-  Balloon: {fileID: 7465819118463485731}
-  text: {fileID: 7179012327775268883}
 --- !u!114 &7612088735431933615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +93,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697436386880772154}
   m_CullTransparentMesh: 0
+--- !u!114 &5900601477233561225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697436386880772154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 514c2b7c1399e1e43bca63e878f9350d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: owlywowly
+  Balloon: {fileID: 7465819118463485731}
+  text: {fileID: 7179012327775268883}
+  animalSound: hoot hoot
+  eatingSound: nomnom
+  canEatMeat: 1
+  canEatLeaves: 0
+  canDoTrick: 1
 --- !u!1 &1786862614596210801
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,3 +277,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afb2b1f0e3b309444a11532f6830a7cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seconds: 3

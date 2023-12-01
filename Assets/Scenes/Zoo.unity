@@ -928,13 +928,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animals:
-  - {fileID: 114938508428900998, guid: e7f8c0fa6e23a0846b1c14e803d8dc87, type: 3}
-  - {fileID: 114755402308563808, guid: 20880f50fd7c97041a2f99c8fd3890cf, type: 3}
-  - {fileID: 114775757915394608, guid: b4ef08bb34d7e8d42a322a3fb477bd93, type: 3}
-  - {fileID: 114971796148678666, guid: 9d8f88e4e4860ac489141755f7175db2, type: 3}
-  - {fileID: 114782059285527604, guid: ca5452b56f32abc46bc83ba2db5f04fd, type: 3}
-  - {fileID: -7481281010558936938, guid: 04b86a069ff579e4d987900a5cc8094c, type: 3}
-  - {fileID: 3517847755810475639, guid: 3a6b5a3b1a6b5d0438823c66bf6ad9cd, type: 3}
+  - {fileID: 4541639954003806785, guid: 3a6b5a3b1a6b5d0438823c66bf6ad9cd, type: 3}
+  - {fileID: -3820144174265825463, guid: e7f8c0fa6e23a0846b1c14e803d8dc87, type: 3}
+  - {fileID: -5444960266942514873, guid: 20880f50fd7c97041a2f99c8fd3890cf, type: 3}
+  - {fileID: 5900601477233561225, guid: 04b86a069ff579e4d987900a5cc8094c, type: 3}
+  - {fileID: 571026778892230595, guid: b4ef08bb34d7e8d42a322a3fb477bd93, type: 3}
+  - {fileID: 2308762426111835248, guid: 9d8f88e4e4860ac489141755f7175db2, type: 3}
+  - {fileID: 4586643785519856836, guid: ca5452b56f32abc46bc83ba2db5f04fd, type: 3}
   InputField: {fileID: 1717165944}
 --- !u!1 &1096552935
 GameObject:
