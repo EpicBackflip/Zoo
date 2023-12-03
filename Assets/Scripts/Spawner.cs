@@ -27,7 +27,7 @@ namespace Zoo
                 animalObjects[i].transform.position = newPosition;
             }
         }
-        // these 3 functions all essentially function the same for all the animals in the list they call the eat method or the dotrick method
+        // these 3 functions all essentially function the same, for all the animals in the list they call the eat method or the dotrick method
         public void EatMeat()
         {
             foreach (GameObject animal in animalObjects)
