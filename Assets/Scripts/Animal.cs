@@ -6,54 +6,52 @@ namespace Zoo
 {
     public class Animal : MonoBehaviour
     {
-        [Header("required components")]
-        [Tooltip("drag the balloon child object from the chosen animal here")]
+        [HideInInspector]
+        public AnimalScriptableObject animalData;
         [SerializeField]
-        private GameObject Balloon;
-        [Tooltip("drag the text child object from the chosen animal here")]
+        [Tooltip("drag the balloon object from the animal prefab here")]
+        private GameObject balloon;
+        [Tooltip("drag the text object from the animal prefab here")]
         [SerializeField]
         private Text text;
+        private Image image;
         
-        [Header("animal attributes")]
-        [Tooltip("here you can set the name animal sound and eating sound for each animal to be displayed based on it's method")]
-        public string name;
-        [SerializeField]
-        private string animalSound;
-        [SerializeField]
-        private string eatingSound;
-        
-        [Header("animal booleans")]
-        [Tooltip("here you can tick the boxes of the methods you want the animal to be able to execute")]
-        [SerializeField]
-        private bool canEatMeat;
-        [SerializeField]
-        private bool canEatLeaves;
-        [SerializeField]
-        private bool canDoTrick;
+        private void Start()
+        {
+            SetupAnimal();
+        }
 
-        // these methods simply activate the balloon and set the text to that of the set attributes
+        // here im setting up the animals sprite and name
+        private void SetupAnimal()
+        {
+            image = GetComponent<Image>();
+            image.sprite = animalData.sprite;
+            balloon.SetActive(false);
+            name = animalData.name;
+        }
+        // these methods simply activate the balloon and set the text to that of the set attributes of the scriptable object
         // theres no need to deactivate the balloons as this is done by a different script
         public void SayHello()
         {
-            Balloon.SetActive(true);
-            text.text = animalSound;
+            balloon.SetActive(true);
+            text.text = animalData.animalSound;
         }
 
         public void EatMeat()
         {
-            if (canEatMeat)
+            if (animalData.canEatMeat)
             {
-                Balloon.SetActive(true);
-                text.text = eatingSound;
+                balloon.SetActive(true);
+                text.text = animalData.eatingSound;
             }
         }
         
         public void EatLeaves()
         {
-            if (canEatLeaves)
+            if (animalData.canEatLeaves)
             {
-                Balloon.SetActive(true);
-                text.text = eatingSound;
+                balloon.SetActive(true);
+                text.text = animalData.eatingSound;
             }
         }
         
@@ -62,7 +60,7 @@ namespace Zoo
         {
             for (int i = 0; i < 360; i++)
             {
-                if (canDoTrick)
+                if (animalData.canDoTrick)
                 {
                     transform.localRotation = Quaternion.Euler(i, 0, 0);
                     yield return new WaitForEndOfFrame();

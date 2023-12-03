@@ -182,15 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 514c2b7c1399e1e43bca63e878f9350d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: foxy
-  Balloon: {fileID: 3517847755979632774}
-  text: {fileID: 3517847755654943796}
-  animalSound: thanks matey
-  eatingSound: pring pring pring
-  canEatMeat: 1
-  canEatLeaves: 0
-  canEatBoth: 0
-  canDoTrick: 1
+  animalData: {fileID: 11400000, guid: d7a0134fc30296240919da1e76b36fb5, type: 2}
 --- !u!1 &3517847755979632774
 GameObject:
   m_ObjectHideFlags: 0

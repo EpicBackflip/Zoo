@@ -927,14 +927,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc0d28aae83133c469baad1be57e1fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animals:
-  - {fileID: 4541639954003806785, guid: 3a6b5a3b1a6b5d0438823c66bf6ad9cd, type: 3}
-  - {fileID: -3820144174265825463, guid: e7f8c0fa6e23a0846b1c14e803d8dc87, type: 3}
-  - {fileID: -5444960266942514873, guid: 20880f50fd7c97041a2f99c8fd3890cf, type: 3}
-  - {fileID: 5900601477233561225, guid: 04b86a069ff579e4d987900a5cc8094c, type: 3}
-  - {fileID: 571026778892230595, guid: b4ef08bb34d7e8d42a322a3fb477bd93, type: 3}
-  - {fileID: 2308762426111835248, guid: 9d8f88e4e4860ac489141755f7175db2, type: 3}
-  - {fileID: 4586643785519856836, guid: ca5452b56f32abc46bc83ba2db5f04fd, type: 3}
+  animalScriptableObjects:
+  - {fileID: 11400000, guid: 24ca85c5d2a0ee44bb08e871f78d6b7d, type: 2}
+  - {fileID: 11400000, guid: 2c671a1756ad4ae49a159896954a25be, type: 2}
+  - {fileID: 11400000, guid: 3e6bb0a69479fc641bb9edec89ad2f18, type: 2}
+  - {fileID: 11400000, guid: bb1d834d6db68c042bd3a08f343dca4f, type: 2}
+  - {fileID: 11400000, guid: 047e7e556c7460c4dbebfb01f32fbe33, type: 2}
+  - {fileID: 11400000, guid: 21ca9132903878b4398fe16cfd012d99, type: 2}
+  - {fileID: 11400000, guid: 124e10ceafc0ab244a0b533a4e2556de, type: 2}
+  animalPrefab: {fileID: 1431250164449303421, guid: 1212c1b5b2863e247bef8fac7ce21bd3,
+    type: 3}
   InputField: {fileID: 1717165944}
 --- !u!1 &1096552935
 GameObject:

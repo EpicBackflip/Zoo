@@ -193,14 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 514c2b7c1399e1e43bca63e878f9350d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: marty
-  Balloon: {fileID: 1043684593461274}
-  text: {fileID: 114601203191200772}
-  animalSound: zebra
-  eatingSound: munch munch zank yee bra
-  canEatMeat: 0
-  canEatLeaves: 1
-  canDoTrick: 0
+  animalData: {fileID: 11400000, guid: d7a0134fc30296240919da1e76b36fb5, type: 2}
 --- !u!1 &1247384754963540
 GameObject:
   m_ObjectHideFlags: 0

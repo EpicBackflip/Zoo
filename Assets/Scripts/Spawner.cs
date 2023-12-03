@@ -6,44 +6,48 @@ namespace Zoo
 {
     class Spawner : MonoBehaviour
     {
-        //list for refferences of the animals to instantiate 
+        [Tooltip("Place the scriptable object of the animal you want to be spawned here")]
         [SerializeField]
-        [Tooltip("place a prefab of an animal here to have it spawned when the game starts")]
-        private List<Animal> animals = new List<Animal>(7);
-        // list of actual animal objects in the game
-        private List<Animal> animalobjects = new List<Animal>();
+        private List<AnimalScriptableObject> animalScriptableObjects = new List<AnimalScriptableObject>(7);
+        [Tooltip("Place the animal prefab here")]
+        [SerializeField] 
+        private GameObject animalPrefab;
+        private List<GameObject> animalObjects = new List<GameObject>();
+        private Vector3 newPosition = new Vector3(512, 384, 0);
+        [Tooltip("drag the input field of the scene here")]
         public InputField InputField;
         
-        //here I instantiate the animals that i've manually put in the list in the inspector
+        //here I'm spawning 7 of the empty animal prefabs and then looping through them in order to inject the data of the scriptable object into them and setting their position.
         private void Start()
         {
-            for (int i = 0; i < animals.Count; i++)
+            for (int i = 0; i < animalScriptableObjects.Count; i++)
             {
-                animalobjects.Add( Instantiate(animals[i], transform));
+                animalObjects.Add(Instantiate(animalPrefab,transform));
+                animalObjects[i].GetComponent<Animal>().animalData = animalScriptableObjects[i];
+                animalObjects[i].transform.position = newPosition;
             }
         }
-        // these 3 functions all essentially function the same for all the animals in the list they call the eat method or 
-        // the dotrick method
+        // these 3 functions all essentially function the same for all the animals in the list they call the eat method or the dotrick method
         public void EatMeat()
         {
-            foreach (Animal animal in animalobjects)
+            foreach (GameObject animal in animalObjects)
             {
-                animal.EatMeat();
+                animal.GetComponent<Animal>().EatMeat();
             }
         }
         public void EatLeaves()
         {
-            foreach (Animal animal in animalobjects)
+            foreach (GameObject animal in animalObjects)
             {
-                animal.EatLeaves();
+                animal.GetComponent<Animal>().EatLeaves();
             }
         }
-        // the only difference here is that it uses a startcoroutine as totrick is a coroutine
+        // the only difference here is that it uses a startcoroutine as dotrick is a coroutine
         public void DoTrick()
         {
-            foreach (Animal animal in animalobjects)
+            foreach (GameObject animal in animalObjects)
             {
-                animal.StartCoroutine(animal.DoTrick());
+                StartCoroutine(animal.GetComponent<Animal>().DoTrick());
             }
         }
         // here I check if inputfield is empty in order for all animals to say hello
@@ -51,17 +55,17 @@ namespace Zoo
         {
             if (InputField.text == "")
             {
-                foreach (Animal animal in animalobjects)
+                foreach (GameObject animal in animalObjects)
                 {
-                    animal.SayHello();
+                    animal.GetComponent<Animal>().SayHello();
                 }
             }
-            foreach (Animal animal in animalobjects)
+            
+            foreach (GameObject animal in animalObjects)
             {
-                // here i check if the inputfield text corresponds to an animal name if so that animal says hello
                 if (animal.name == InputField.text)
                 {
-                    animal.SayHello();
+                    animal.GetComponent<Animal>().SayHello();
                 }
             }
         }
