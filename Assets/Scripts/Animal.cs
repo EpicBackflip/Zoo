@@ -8,8 +8,8 @@ namespace Zoo
     {
         [HideInInspector]
         public AnimalScriptableObject animalData;
-        [SerializeField]
         [Tooltip("drag the balloon object from the animal prefab here")]
+        [SerializeField]
         private GameObject balloon;
         [Tooltip("drag the text object from the animal prefab here")]
         [SerializeField]
