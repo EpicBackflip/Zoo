@@ -29,7 +29,7 @@ namespace Zoo
             balloon.SetActive(false);
             name = animalData.name;
         }
-        // these methods simply activate the balloon and set the text to that of the set attributes of the scriptable object
+        // 2 methods simply activate the balloon and set the text to that of the set attributes of the scriptable object
         // theres no need to deactivate the balloons as this is done by a different script
         public void SayHello()
         {
@@ -37,22 +37,10 @@ namespace Zoo
             text.text = animalData.animalSound;
         }
 
-        public void EatMeat()
+        public void Eat()
         {
-            if (animalData.canEatMeat)
-            {
-                balloon.SetActive(true);
-                text.text = animalData.eatingSound;
-            }
-        }
-        
-        public void EatLeaves()
-        {
-            if (animalData.canEatLeaves)
-            {
-                balloon.SetActive(true);
-                text.text = animalData.eatingSound;
-            }
+            balloon.SetActive(true);
+            text.text = animalData.eatingSound;
         }
         
         // this method rotates the local transform of the object until the end of the frame so it  makes a full 360 spin
@@ -67,6 +55,5 @@ namespace Zoo
                 }
             }
         }
-
     }
 }

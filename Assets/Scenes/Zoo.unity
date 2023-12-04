@@ -935,7 +935,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 047e7e556c7460c4dbebfb01f32fbe33, type: 2}
   - {fileID: 11400000, guid: 21ca9132903878b4398fe16cfd012d99, type: 2}
   - {fileID: 11400000, guid: 124e10ceafc0ab244a0b533a4e2556de, type: 2}
-  animalPrefab: {fileID: 1431250164449303421, guid: 1212c1b5b2863e247bef8fac7ce21bd3,
+  animalPrefab: {fileID: 4223158457840529813, guid: 1212c1b5b2863e247bef8fac7ce21bd3,
     type: 3}
   InputField: {fileID: 1717165944}
 --- !u!1 &1096552935
